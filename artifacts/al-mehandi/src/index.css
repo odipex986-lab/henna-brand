@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-border: var(--primary-border);
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary-border: var(--secondary-border);
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-border: var(--muted-border);
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-border: var(--accent-border);
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive-border: var(--destructive-border);
+
+  --font-sans: 'Outfit', sans-serif;
+  --font-display: 'Playfair Display', serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* Warm elegant Islamic-inspired, ornate beige and gold, henna boutique feel */
+  --background: 40 33% 98%;      /* Light warm beige */
+  --foreground: 25 40% 15%;      /* Deep brown */
+  
+  --card: 0 0% 100%;
+  --card-foreground: 25 40% 15%;
+  --card-border: 35 30% 90%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 25 40% 15%;
+  --popover-border: 35 30% 90%;
+  
+  --primary: 25 50% 35%;         /* Rich Henna Brown */
+  --primary-foreground: 40 33% 98%;
+  
+  --secondary: 35 30% 92%;       /* Soft taupe */
+  --secondary-foreground: 25 50% 35%;
+  
+  --muted: 35 30% 92%;
+  --muted-foreground: 25 20% 45%;
+  
+  --accent: 43 74% 49%;          /* Old Gold */
+  --accent-foreground: 40 33% 98%;
+  
+  --destructive: 0 70% 45%;
+  --destructive-foreground: 40 33% 98%;
+  
+  --border: 35 30% 85%;
+  --input: 35 30% 85%;
+  --ring: 43 74% 49%;            /* Gold focus ring */
+  
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background-image: radial-gradient(hsl(var(--primary) / 0.03) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply tracking-tight text-primary;
+  }
+}
+
+/* Custom scrollbar for an elegant feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--secondary));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
+}
+
+.glass-panel {
+  @apply bg-white/70 backdrop-blur-md border border-white/50 shadow-xl shadow-primary/5;
+}
+
+.henna-gradient {
+  @apply bg-gradient-to-br from-primary to-[#703611];
+}
+
+.gold-gradient {
+  @apply bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37];
+}

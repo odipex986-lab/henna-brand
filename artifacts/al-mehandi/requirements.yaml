@@ -1,0 +1,23 @@
+packages:
+  "framer-motion": "Animations and page transitions"
+  "react-hook-form": "Form state management"
+  "@hookform/resolvers": "Zod resolver for forms"
+  "date-fns": "Date formatting"
+  "clsx": "Class merging"
+  "tailwind-merge": "Tailwind class merging"
+
+images:
+  - path: "artifacts/al-mehandi/public/images/hero-bg.png"
+    description: "Warm beige background with subtle, elegant, low-contrast gold and brown intricate henna and Islamic geometric patterns, high quality, luxurious boutique feel"
+    aspect_ratio: "16:9"
+  - path: "artifacts/al-mehandi/public/images/logo.png"
+    description: "Minimalist elegant logo mark for a henna brand, circular gold and deep brown floral motif, transparent background"
+    aspect_ratio: "1:1"
+  - path: "artifacts/al-mehandi/public/images/henna-placeholder.png"
+    description: "A beautifully decorated organic henna cone resting on a textured beige linen cloth, soft natural lighting, aesthetic product photography"
+    aspect_ratio: "1:1"
+
+notes:
+  - Using generated React Query hooks from @workspace/api-client-react
+  - File uploads implemented as manual fetch with FormData since they aren't in OpenAPI spec
+  - Using Shadcn UI component structure already present in the workspace
