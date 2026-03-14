@@ -1,0 +1,160 @@
+Build a modern responsive website for a henna brand called Al Mehandi that sells combo offers.
+
+The website should work well on mobile and desktop, and have an elegant Islamic / mehndi themed design using beige, gold, and minimal decorative patterns similar to Ramadan or mehndi artwork.
+
+Brand Information:
+Brand Name: Al Mehandi
+Instagram: @al_mehandi_
+Phone / WhatsApp: 8136917338
+Email: almehandi1@gmail.com
+
+The homepage should display combo offers as individual products.
+
+PRODUCTS (COMBO OFFERS):
+
+1. Combo 1 – ₹70
+   Includes:
+
+- 1 Henna Cone
+- 1 Nail Cone
+
+2. Combo 2 – ₹100
+   Includes:
+
+- 1 Henna Cone
+- 2 Nail Cones
+
+3. Combo 3 – ₹110
+   Includes:
+
+- 2 Henna Cones
+- 1 Nail Cone
+
+4. Combo 4 – ₹190
+   Includes:
+
+- 3 Henna Cones
+- 2 Nail Cones
+
+5. Combo 5 – ₹250
+   Includes:
+
+- 4 Henna Cones
+- 3 Nail Cones
+
+6. Combo 6 – ₹560
+   Includes:
+
+- 10 Henna Cones
+- 5 Nail Cones
+
+Each product should display:
+
+- Combo name
+- Price
+- Items included
+- A Checkout button
+
+IMPORTANT:
+Do NOT include "Add to Cart".
+Each product should support direct checkout only.
+
+CHECKOUT FLOW:
+
+When the user clicks Checkout, show a form asking for required details:
+
+Customer Details Form:
+
+- Full Name
+- Phone Number
+- WhatsApp Number (Required)
+- Delivery Address
+- City
+- State
+- Pincode
+- Order Notes (optional)
+
+After submitting the form, take the user to a Payment Page.
+
+PAYMENT SYSTEM:
+
+Do NOT integrate any third-party payment gateway.
+
+Instead use a custom UPI QR payment system.
+
+Each product should have its own QR code image corresponding to the product price.
+
+Example:
+₹70 product → QR image 1
+₹100 product → QR image 2
+₹110 product → QR image 3
+₹190 product → QR image 4
+₹250 product → QR image 5
+₹560 product → QR image 6
+
+On the payment page:
+
+- Show product name
+- Show price
+- Display the QR code image
+- Show instructions:
+
+"Scan this QR using any UPI app and complete the payment."
+
+After payment, the user must upload a screenshot of the payment.
+
+Once uploaded, show the message:
+
+"Your order has been submitted successfully.
+Our team will verify the payment screenshot.
+You will receive a confirmation message on your WhatsApp number after verification."
+
+ADMIN PANEL:
+
+Create a secure Admin Dashboard where the admin can manage orders.
+
+Admin should be able to:
+
+View Orders with details:
+
+- Order ID
+- Customer Name
+- Phone Number
+- WhatsApp Number
+- Address
+- Ordered Combo
+- Price
+- Payment Screenshot
+- Order Status
+
+Admin should be able to update order status:
+
+- Pending Verification
+- Payment Verified
+- Order Confirmed
+- Cancelled
+
+Additional admin features:
+
+- Upload / change QR code images for each product
+- View uploaded payment screenshots
+- Search orders by phone number or name
+- Export order data
+- Update order status
+
+GENERAL WEBSITE FEATURES:
+
+- Fully responsive mobile-friendly design
+- Clean and elegant UI
+- Secure admin login
+- Image upload support for payment screenshots
+- Simple navigation
+- Fast loading
+
+OPTIONAL FEATURES (if possible):
+
+- Automatic WhatsApp notification after admin confirms order
+- Order tracking page
+- Simple analytics dashboard showing daily orders
+
+Use a modern web stack suitable for building a small ecommerce website with an admin panel.
