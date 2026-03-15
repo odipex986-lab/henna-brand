@@ -3,5 +3,6 @@ RUN npm install -g pnpm
 WORKDIR /app
 COPY . .
 RUN pnpm install
+WORKDIR /app/artifacts/api-server
 EXPOSE 3000
-CMD ["pnpm", "--filter", "@workspace/api-server", "dev"]
+CMD ["node_modules/.bin/tsx", "./src/index.ts"]
