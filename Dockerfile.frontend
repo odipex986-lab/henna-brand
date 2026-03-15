@@ -5,5 +5,4 @@ COPY . .
 RUN pnpm install
 WORKDIR /app/artifacts/al-mehandi
 RUN BASE_PATH=/ PORT=4173 pnpm build
-EXPOSE 8080
-CMD ["node_modules/.bin/vite", "preview", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["sh", "-c", "node_modules/.bin/vite preview --host 0.0.0.0 --port ${PORT:-8080}"]
