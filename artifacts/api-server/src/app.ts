@@ -10,7 +10,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/uploads", express.static(path.join(process.cwd(), "uploads")));
-
 app.use("/api", router);
+
+// Serve frontend
+const frontendPath = path.join(process.cwd(), "..", "al-mehandi", "dist", "public");
+app.use(express.static(frontendPath));
+app.get("*", (_req, res) => {
+  res.sendFile(path.join(frontendPath, "index.html"));
+});
 
 export default app;
