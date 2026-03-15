@@ -27,5 +27,6 @@
     "@types/node": "catalog:",
     "esbuild": "^0.27.3",
     "tsx": "catalog:"
-  }
+  },
+  "packageManager": "pnpm@10.32.1"
 }
