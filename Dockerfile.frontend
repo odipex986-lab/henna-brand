@@ -4,5 +4,7 @@ WORKDIR /app
 COPY . .
 RUN pnpm install
 WORKDIR /app/artifacts/al-mehandi
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
 RUN BASE_PATH=/ PORT=4173 pnpm build
 CMD ["sh", "-c", "node_modules/.bin/vite preview --host 0.0.0.0 --port ${PORT:-8080}"]
