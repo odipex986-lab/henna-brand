@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@10.32.1",
   "scripts": {
     "dev": "NODE_ENV=development tsx ./src/index.ts",
     "build": "tsx ./build.ts",
@@ -15,7 +16,7 @@
     "@workspace/db": "workspace:*",
     "cookie-parser": "^1.4.7",
     "cors": "^2",
-    "drizzle-orm": "catalog:",
+    "drizzle-orm": "^0.45.1",
     "express": "^5",
     "jsonwebtoken": "^9.0.3",
     "multer": "^2.1.1"
@@ -24,9 +25,8 @@
     "@types/cookie-parser": "^1.4.10",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
-    "@types/node": "catalog:",
+    "@types/node": "^25.3.3",
     "esbuild": "^0.27.3",
-    "tsx": "catalog:"
-  },
-  "packageManager": "pnpm@10.32.1"
+    "tsx": "^4.21.0"
+  }
 }
